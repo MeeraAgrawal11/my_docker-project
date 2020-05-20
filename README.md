@@ -1,4 +1,4 @@
-# my_docker-project
+# My_Docker-Project
 # INTRODUCTION
 I have completed my Docker Training under IIEC RISE 1.0 under the guidance of Vimal Daga Sir. 
 Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and deploy it as one package. By doing so, thanks to the container, the developer can rest assured that the application will run on any other Linux machine regardless of any customized settings that machine might have that could differ from the machine used for writing and testing the code.
@@ -14,7 +14,10 @@ Docker is a tool designed to make it easier to create, deploy, and run applicati
 
 5.Centos
 
-# DESCRIPTION
+# PROJECT TITLE:
+"StayHome_StaySafe"
+
+# PROJECT DESCRIPTION
 I have tried to built a webpage which shows the list of cities where test centres are available in Rajasthan which are testing the pandemic disease COVID-19.
 
 # SCOPE OF IMPROVEMENT
