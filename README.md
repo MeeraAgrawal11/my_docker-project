@@ -12,13 +12,15 @@ Docker is a tool designed to make it easier to create, deploy, and run applicati
 
 4.MySQL
 
-5.Centos
+5.MariaDB
+
+6.Wordpress
 
 # PROJECT TITLE:
 "StayHome_StaySafe"
 
 # PROJECT DESCRIPTION
-I have tried to built a webpage which shows the list of cities where test centres are available in Rajasthan which are testing the pandemic disease COVID-19.
+I have tried to built a webpage using Docker which shows the list of cities where test centres are available in Rajasthan which are testing the pandemic disease COVID-19.
 
 # SCOPE OF IMPROVEMENT
 There are many more features that can be added in my webpage,currently working on it.Currently it is also not accessible by the public IP address. 
