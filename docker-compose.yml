@@ -1,0 +1,34 @@
+version: "3"
+services:
+  mysql:
+    image: mariadb
+    ports:
+      - "3260:3260"
+    volumes:
+      - mysql_store:/var/lib/mysql/
+    environment:
+      MYSQL_ROOT_PASSWORD: mydata
+      MYSQL_USER: meera1108
+      MYSQL_PASSWORD: vaayu
+      MYSQL_DATABASE: INDIANS
+
+  wordpress:
+    image: wordpress
+    ports:
+      - "2000:80"
+    volumes:
+      - mywebsite_store:/var/www/html/
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_USER: meera1108
+      WORDPRESS_DB_PASSWORD: vaayu
+      WORDPRESS_DB_NAME: INDIANS
+
+    depends_on:
+      - mysql
+    links:
+      - mysql
+
+volumes:
+  mysql_store:
+  mywebsite_store:
