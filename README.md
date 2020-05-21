@@ -16,6 +16,28 @@ Docker is a tool designed to make it easier to create, deploy, and run applicati
 
 6.Wordpress
 
+# SETUP INSTALLATION
+# 1.INSTALLING AND RUNNING DOCKER:
+For this we have to first configure our yum by writing these commands:
+ - cd /etc/yum.repos.d
+ - gedit docker.repo
+In docker.repo file,we have to write:
+ - baseurl=https://download.docker.com/linux/centos/7/x86_64/stable/
+ - gpgcheck=0
+Then:
+ - yum install docker-ce --nobest -y
+ - firewall-cmd --zone=public --add-masquerade --permanent
+ - firewall-cmd --zone=public --add-port=80/tcp --permanent
+ - firewall-cmd --zone=public --add-port=443/tcp --permanent
+ - firewall-cmd --reload
+ - systemctl start docker
+ - systemctl enable docker
+ - systemctl status docker
+ # 2.INSTALLING AND RUNNING MYSQL & MariaDB:
+  - docker pull mysql:5.7
+  - docker pull mariadb:latest
+  - docker run -d -it -e MYSQL_ROOT_PASSWORD=mydata -e MYSQL_USER=meera1108 -e MYSQL_PASSWORD=vaayu -e MYSQL_DATABASE=INDIANS -v    mysql_store: /var/lib/mysql --name mysql mariadb:latest
+  - mysql -h 172.17.0.2 -u meera1108 -pmydata
 # PROJECT TITLE:
 "StayHome_StaySafe"
 
