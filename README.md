@@ -36,8 +36,18 @@ Then:
  # 2.INSTALLING AND RUNNING MYSQL & MariaDB:
   - docker pull mysql:5.7
   - docker pull mariadb:latest
+  - docker volume create mysql_store
   - docker run -d -it -e MYSQL_ROOT_PASSWORD=mydata -e MYSQL_USER=meera1108 -e MYSQL_PASSWORD=vaayu -e MYSQL_DATABASE=INDIANS -v    mysql_store: /var/lib/mysql --name mysql mariadb:latest
   - mysql -h 172.17.0.2 -u meera1108 -pmydata
+ # 3.INSTALLING WORDPRESS:
+  - docker pull wordpress:latest
+  - docker volume create mywebsite_store
+  - docker run -dit -e WORDPRESS_DB_HOST=mysql -e WORDPRESS_DB_USER=meera1108 -e WORDPRESS_DB_PASSWORD=vaayu -e  WORDPRESS_DB_NAME=INDIANS -v mywebsite_store:/var/www/html --name web11 -p 2000:80 --link mysql wordpress:latest 
+ # STEP 4:
+ Now, make a directory in which we have to make a file named "docker-compose.yml".Now, write the commands inside it and then save & exit.After that, run this command on terminal:
+  - docker-compose up
+ This will create and run that environment.Now, go to the browser and browse: "IPaddress:PortNumber"
+
 # PROJECT TITLE:
 "StayHome_StaySafe"
 
