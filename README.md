@@ -18,13 +18,13 @@ Docker is a tool designed to make it easier to create, deploy, and run applicati
 
 # SETUP INSTALLATION
 # 1.INSTALLING AND RUNNING DOCKER:
-For this we have to first configure our yum by writing these commands:
+- For this we have to first configure our yum by writing these commands:
  - cd /etc/yum.repos.d
  - gedit docker.repo
-In docker.repo file,we have to write:
+- In docker.repo file,we have to write:
  - baseurl=https://download.docker.com/linux/centos/7/x86_64/stable/
  - gpgcheck=0
-Then:
+- Then:
  - yum install docker-ce --nobest -y
  - firewall-cmd --zone=public --add-masquerade --permanent
  - firewall-cmd --zone=public --add-port=80/tcp --permanent
@@ -46,7 +46,8 @@ Then:
  # STEP 4:
  Now, make a directory in which we have to make a file named "docker-compose.yml".Now, write the commands inside it and then save & exit.After that, run this command on terminal:
   - docker-compose up
- This will create and run that environment.Now, go to the browser and browse: "IPaddress:PortNumber"
+ - This will create and run that environment.Now, go to the browser and browse: 
+  - "IPaddress:PortNumber"
 
 # PROJECT TITLE:
 "StayHome_StaySafe"
